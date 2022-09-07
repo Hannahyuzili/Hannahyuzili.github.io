@@ -1,0 +1,218 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f9dde6;
+  font-size: 16px;
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  border-style: double;
+  border-width: 4.5px;
+  color: rgb(255, 255, 255);
+  padding: 13px 16px;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 13px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin: 4px 4px;
+  cursor: pointer;
+  background-size: 200% 200%;
+  -webkit-animation: Gradient 4s ease infinite;
+  -moz-animation: Gradient 4s ease infinite;
+  animation: Gradient 4s ease infinite;
+}
+
+/*first, i add a double border for every buttons and changed a font style which i think is better. 
+Second, i wanted to bring a sense of flow to the page, so I animated both the title and the button background with color gradients.*/
+
+@-webkit-keyframes Gradient {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+
+@-moz-keyframes Gradient {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+
+@keyframes Gradient {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+
+.button:hover{
+  box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24), 0 10px 20px 0 rgba(0,0,0,0.19);
+}
+
+/*When you put the mouse over it it will have a shadow and it will look very three-dimensional.*/
+
+.button1 {background-image: linear-gradient(to right, rgb(150, 1, 1), rgba(255, 0, 0, 0.8));}
+
+.button2 {
+  background-image: linear-gradient(to right, rgb(255, 0, 0,0.8),orange, rgba(255, 255, 0, 0.8));
+  transition: all 1s;}
+.button2:hover {
+  width: 300px;
+  margin-left: -100px;}
+
+.button3 {
+  background-image: linear-gradient(to right, rgba(255, 255, 0, 0.8),rgba(0, 128, 0, 0.8));
+  transition: all 2s;}  
+.button3:hover {
+  width: 300px;
+  margin-left: -190px;}
+
+/*For Button2 and Button3, I added CSS transitions like presentation tags to them.*/
+
+.button4 {background-image: linear-gradient(to right, rgba(0, 128, 0, 0.8),rgba(0, 0, 255, 0.8));} 
+.button5 {background-image: linear-gradient(to right, rgba(0, 0, 255, 0.8),rgba(76, 0, 130, 0.8));} 
+.button6 {background-image: linear-gradient(to right, rgba(76, 0, 130, 0.8),violet);}
+/*Here, the first button to the sixth button is a rainbow gradient---red,orange,yellow,green,blue,indigo,violet. And I lowered their transparency so they wouldn't look too harsh.*/
+
+.buttonmode{
+  border: none;
+  border-style: outset;
+  border-width: 4px;
+  padding: 3px 15px;
+  margin: 15px 400px;
+}
+
+
+a:link {
+color: rgb(255, 255, 255);
+text-decoration: none;
+}
+
+a:visited {
+  color: rgb(28, 28, 106);
+}
+
+a:hover {
+  color: rgb(70, 148, 237);
+  text-decoration: underline;
+}
+/*these are some small changes to all the color and style of links.*/
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: 1s;
+}
+/*here, I added a 1s transition to give the eyes time to adjust when switching between light and dark modes.*/
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+  padding-left: 150px;
+  background: radial-gradient(circle at 50% 0,
+  rgba(255,0,0,.5),
+  rgba(255,0,0,0) 70.71%),
+radial-gradient(circle at 6.7% 75%,
+  rgba(0,0,255,.5),
+  rgba(0,0,255,0) 70.71%),
+radial-gradient(circle at 93.3% 75%,
+  rgba(0,255,0,.5),
+  rgba(0,255,0,0) 70.71%) beige;
+  background-size: 200% 200%;
+  -webkit-animation: Gradient 4s ease infinite;
+  -moz-animation: Gradient 4s ease infinite;
+  animation: Gradient 4s ease infinite;
+}
+
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-indent: 2rem;
+}
+/*I've indented the first line of the text to make it look easier.*/
+
+figcaption{
+  width: fit-content;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+/*small font change to the text under image.*/
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
