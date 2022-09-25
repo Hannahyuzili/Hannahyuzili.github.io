@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+body {
+    height: 800px;
+    background: rgb(255, 192, 250);
+}
+ 
+h1 {
+    font-size: 2.8em;
+    text-align:center;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Remove the built-in control bar displayed in full screen */
+.mianVideo::-webkit-media-controls {
+    display: none !important;
+}
+ 
+.mianVideo {
+    width: 700px;
+    width: 1000px;
+    height: auto;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+ 
+.cloudVideoDiv {
+    position: absolute;
+    user-select: none;
+    overflow: hidden;
+}
+ 
+.controlPanelDiv {
+    position: absolute;
+    background-color: rgba(255, 252, 252, 0.5);
+    border-radius: 5px;
+    display: none;
+    height: 30px;
+    bottom: 0px;
+    left: 10px;
+    animation: controlPanelDiv 0.5s forwards;
+    opacity: 0;
+}
+ 
+@keyframes controlPanelDiv {
+    0% {}
+ 
+    100% {
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+ 
+.progressBar {
+    position: absolute;
+    opacity: 0.8;
+    cursor: pointer;
+}
+ 
+.progressNum {
+    position: absolute;
+    right: 160px;
+    bottom: 4px;
+}
+ 
+.fullScreen {
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
+    cursor: pointer;
+}
+ 
+.controlSound {
+    position: absolute;
+    right: 38px;
+    bottom: 0px;
+    cursor: pointer;
+}
+ 
+.controlSoundProgress {
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+    width: 35px;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    display: none;
+    text-align: center;
+}
+ 
+.controlSoundProgress input {
+    width: 80px;
+    height: 6px;
+    transform-origin: 0% 100%;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 90%;
+    left: 60%;
+}
+ 
+.playAndPause {
+    position: absolute;
+    bottom: -2px;
+    left: 8px;
+    cursor: pointer;
+}
+ 
+.videoSpeed {
+    width: 52px;
+    position: absolute;
+    bottom: 4px;
+    right: 90px;
+    cursor: pointer;
+    font-weight: 600;
+}
+ 
+.videoSpeedList {
+    width: 70px;
+    position: absolute;
+    bottom: 35px;
+    right: 95px;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    display: none;
+}
+ 
+.videoSpeedList li {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+ 
+.videoSpeedList li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+ 
+.videoSpeedList li.select {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+ 
+.customizePlaybackRate {
+    padding: 1px !important;
+    border: none !important;
+}
+ 
+.customizePlaybackRate input {
+    padding: 3px !important;
+    width: 95%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+}
+ 
+.customizePlaybackRate input::-webkit-input-placeholder {
+    color: black;
+}
+ 
+.customizePlaybackRate input:focus {
+    outline: none;
+}
+ 
+.replay {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+}
+ 
+.loop {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+ 
