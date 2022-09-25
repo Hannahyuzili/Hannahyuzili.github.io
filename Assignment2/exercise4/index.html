@@ -1,0 +1,42 @@
+<!-- This exercise is built off the MDN Video and Audio APIs tutorial written by MDN contributors  -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs -->
+<!-- The base files from the example were modified and filled in via the tutorial and some extra commenting by Patrick McMahon -->
+<!-- Orginal Files: https://github.com/mdn/learning-area/blob/main/javascript/apis/video-audio/start/media-player-start.zip -->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Video player example</title>
+</head>
+
+<!--in this exercise, I choose to make music videos by using custom control components. 
+    I add progress bars, fast forward, fast backward and full screen buttons. 
+    I think continuous fast forward and fast backward can make it easier and more concise for users to see the key content in the video. 
+    The full screen function is an essential element in the video player. 
+    The progress bar can be clicked to reach the specified time. Similarly, mute is also achieved by clicking. 
+    For aesthetic design, all background colors and button colors are set according to the video color to achieve visual unity.-->
+
+<body>
+    <h1>MUSIC VIDEO</h1>
+<div id="video">
+    <div id="mp4par">
+        <video id="mp4" src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"></video>
+        <div id="controls">
+            <input type="range" id="btntime" value="0" max="100"><br>
+            <span id="current_time" style='font-size: 12px;'>00:00</span>
+            <button id="btnstart">PLAY</button>
+            <button id="btngo" >GO</button>
+            <button id="btnback" >BACK</button>
+            <button id="btnmute" >MUTE</button>
+            <input type="range" id="btnsound" value="10" max="100">
+            <button id="btnbig">FULL</button>
+            <span id="totaltime" style='font-size: 12px;'>00:00</span>
+             
+        </div>
+    </div>
+</div>
+<script src="custom-player.js"></script>
+</body>
+</html>

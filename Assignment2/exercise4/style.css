@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'HeydingsControlsRegular';
+    src: url('fonts/heydings_controls-webfont.eot');
+    src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/heydings_controls-webfont.woff') format('woff'),
+         url('fonts/heydings_controls-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+   background: #faafea;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+#video {
+    width: 700px;
+    height: 450px;
+    margin: 0 auto;
+    border: 10px solid silver;
+}
+
+#mp4par {
+    position: relative;
+    width: 700px;
+    height: 450px;
+    float: left;
+    overflow: hidden;
+    background: #b26ee5;
+}
+#mp4 {
+    position: relative;
+    width: 700px;
+    height: 450px;
+}
+#controls {
+    position: absolute;
+    width: 700px;
+    height: 75px;
+    bottom: -75px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.31);
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+#mp4par:hover #controls{
+    bottom: 0;
+}
+#btntime {
+    width: 700px;
+    outline: none;
+    cursor: pointer;
+}
+#btnsound {
+    position: relative;
+    top: 5px;
+}
+
+
+button {
+    position: relative;
+    width: 45px;
+    height: 20px;
+    outline: none;
+    border-style: none;
+    background: radial-gradient(#faafea, #671274);
+    margin: 18px;
+    color: #474747;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: radial-gradient(#faafea, #671274);
+    color: white;
+}
+    
+
+
+
+.iconfont {
+    font-size: 24px;
+    color: #474747;
+}
